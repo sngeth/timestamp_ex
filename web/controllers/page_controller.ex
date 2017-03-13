@@ -1,7 +1,7 @@
 defmodule TimestampEx.PageController do
   use TimestampEx.Web, :controller
 
-  def index(conn, _params) do
-    render conn, "index.html"
+  def index(conn, %{"date" => date}) do
+    render conn, "index.json", date: date
   end
 end

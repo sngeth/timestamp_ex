@@ -14,9 +14,9 @@ defmodule TimestampEx.Router do
   end
 
   scope "/", TimestampEx do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :api # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/:date", PageController, :index
   end
 
   # Other scopes may use custom stacks.
