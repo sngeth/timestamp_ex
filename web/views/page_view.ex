@@ -11,7 +11,7 @@ defmodule TimestampEx.PageView do
   end
 
   defp get_unix_time(date) do
-    { :ok, dt } = Timex.parse("December 15, 2015", "%B %d, %Y", :strftime)
+    { :ok, dt } = Timex.parse(date, "%B %d, %Y", :strftime)
 
     %{ unix: (DateTime.to_unix(%DateTime{ year: dt.year,
         month: dt.month,
